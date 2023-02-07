@@ -17,6 +17,7 @@ for (let i = 0; i <= 14; i++) {
     audio.play();
   });
 }
+//libreria
 
 
 //apuntando a documentos html
@@ -26,15 +27,25 @@ let numeros = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
 numeros = numeros.sort(()=>{return Math.random()-0.52});
 
 let mostraTiempo = document.getElementById("t-restante")
+Swal.fire(
+    'Presiona el primer cuadro y el juego empezara',
+    'Corre que el tiempo Avanza!',
+    'success'
+  )
 
 
 function contarTiempo(){
-    
+
   tiempoRegresivoId =  setInterval(()=>{
         timer--;
         mostraTiempo.innerHTML = `Tiempo: ${timer} segundos`;
         
         if(timer == 0){
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Perdiste!'
+              })
             var audioFail = new Audio("./efects/fail.mp3");
             audioFail.play();
             clearInterval(tiempoRegresivoId)
@@ -87,21 +98,43 @@ function destapar(id){
         mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}`;
 
         if(primerResultado == segundoResultado){
+            
             tarjetasDestapadas = 0;
             var audio = new Audio("./efects/ok.mp3");
             audio.play();
+           
         
             //aumentar aciertos
             aciertos++;
             mostrarAciertos.innerHTML = `Aciertos: ${aciertos}`;
 
             if(aciertos == 8 ){
+                Swal.fire({
+                   
+                    title: `Aciertos:${aciertos}😎 
+                    👏Genial solo tardaste:${timerInicial - timer}segundos  
+                    Movimientos:${movimientos} `,
+                    width: 600,
+                    padding: '3em',
+                    color: '#716add',
+                    background: '#fff',
+                    backdrop: `
+                      rgba(0,0,123,0.4)
+                      url("/images/nyan-cat.gif")
+                      left top
+                      no-repeat
+                    `
+                  })
                 var audioGanador = new Audio("./efects/ganar.mp3");
                 audioGanador.play();
+                let changeBackground = true;
+
+                
                 clearInterval(tiempoRegresivoId);
                 mostrarAciertos.innerHTML = `Aciertos: ${aciertos} 😎`;
                 mostraTiempo.innerHTML = `Genial solo tardaste: ${timerInicial - timer} segundos`;
                 mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}👏`;
+               
 
             }
 
