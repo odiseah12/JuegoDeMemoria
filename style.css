@@ -56,8 +56,8 @@ footer{
 
 @media screen and (max-width: 800px) {
     main{
-        width: 435px;
-        margin: 30px auto;
+        width: 235px;
+        margin: 20px auto;
         display: flex;
         flex-direction: column-reverse;
        
