@@ -9,14 +9,9 @@ main{
     width: 730px;
     margin: 30px auto;
     display: flex;
-   
-   
 
 }
 .sec1{
-
-   
-
     background-color: rgba(165,114,242,1);
     padding: 0 10px 10px 10px;
     border-radius: 8px;
@@ -56,7 +51,7 @@ footer{
 
 @media screen and (max-width: 800px) {
     main{
-        width: 435px;
+        width:330px;
         margin: 30px auto;
         display: flex;
         flex-direction: column-reverse;
@@ -67,19 +62,27 @@ footer{
        
     display: flex;
     background-color: rgba(255,255,255,0.2);
-    width: 440px;
-    height: 120px;
-   
+    width: 330px;
+    height: 90px;
     padding: 0;
 
     
 }
+
 .estadisticas{
+    font-size: 17px;
     text-align: center;
     border: 1px solid white;
-    height: 80px;
+    height: 60px;
     border-radius: 8px;
-    padding: 8px;
+    padding: 3px;
     box-sizing: border-box;
+}
+button{
+    height: 70px;
+    width: 70px;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
 }
 }
