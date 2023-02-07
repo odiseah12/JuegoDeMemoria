@@ -51,7 +51,7 @@ function contarTiempo(){
             clearInterval(tiempoRegresivoId)
             bloquearTarjetas();
             mostrarAciertos.innerHTML = `Aciertos: ${aciertos} 😭😭`;
-            mostraTiempo.innerHTML = `Perdiste: ${timerInicial - timer} segundos`;
+            mostraTiempo.innerHTML = ` ${timerInicial - timer}`;
             mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}😡`;
         }
     },1000)

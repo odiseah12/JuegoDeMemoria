@@ -17,7 +17,7 @@ main{
 
    
 
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(165,114,242,1);
     padding: 0 10px 10px 10px;
     border-radius: 8px;
 }
@@ -57,11 +57,29 @@ footer{
 @media screen and (max-width: 800px) {
     main{
         width: 435px;
-        margin: 20px auto;
+        margin: 30px auto;
         display: flex;
         flex-direction: column-reverse;
        
 
     }
+    .sec2{
+       
+    display: flex;
+    background-color: rgba(255,255,255,0.2);
+    width: 440px;
+    height: 120px;
+   
+    padding: 0;
+
     
+}
+.estadisticas{
+    text-align: center;
+    border: 1px solid white;
+    height: 80px;
+    border-radius: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+}
 }
